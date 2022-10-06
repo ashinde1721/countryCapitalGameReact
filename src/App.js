@@ -6,7 +6,8 @@ function App() {
   Australia: 'Canberra',
   Italy: 'Rome',
   India: 'Delhi',
-  Brazil: 'Brasilia'
+  Brazil: 'Brasilia',
+  Ukraine: 'Kyiv'
   }
   return (
     <div className="App">
