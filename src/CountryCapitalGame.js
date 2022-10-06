@@ -15,7 +15,7 @@ function shuffle(array) {
 
 
 export default function CountryCapitalGame({data}) {
-    const [gameData, setGameData] = useState(shuffleObject(data));
+    const [gameData, setGameData] = useState({});
     const [country, setCountry] = useState(null);
     const [capital, setCapital] = useState(null);
     const [isIncorrectChoice, setIncorrectChoice]  = useState(false);
@@ -24,6 +24,10 @@ export default function CountryCapitalGame({data}) {
         setCapital(null);
         setCountry(null);
     }
+
+    useEffect(() => {
+        setGameData(shuffleObject(data));
+    },[])
 
     useEffect(() => {
         if(country && capital) {
